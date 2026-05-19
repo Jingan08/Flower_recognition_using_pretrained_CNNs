@@ -2,7 +2,7 @@
 
 ## 📌 Project Overview
 
-This research project presents an automated flower species recognition system using deep learning and transfer learning approaches. The study compares the performance of two pre-trained Convolutional Neural Network (CNN) architectures, namely **VGG16** and **InceptionV3**, for multiclass flower classification.
+This research project presents an automated flower species recognition system using deep learning and transfer learning approaches. The study compares the performance of two pre-trained Convolutional Neural Network (CNN) architectures, namely **VGG16**, **InceptionV3**, and **DenseNet-121** for multiclass flower classification.
 
 The project aims to solve the limitations of traditional manual flower identification, which is often time-consuming, inconsistent, and heavily dependent on expert botanical knowledge. By leveraging transfer learning and data augmentation techniques, the system is capable of recognizing flower species under varying real-world conditions such as lighting changes, background complexity, and pose variations.
 
@@ -18,8 +18,6 @@ The project aims to solve the limitations of traditional manual flower identific
 ---
 
 # 🌼 Dataset Information
-
-## Kaggle Flower Recognition Dataset
 
 The dataset contains:
 
@@ -57,6 +55,22 @@ InceptionV3 is an advanced CNN architecture designed with multi-scale feature ex
 * Efficient parameter usage
 * Captures fine and global features simultaneously
 * Better feature discrimination capability
+
+---
+
+## 3️⃣ DenseNet121
+
+DenseNet121 is a densely connected CNN architecture that improves feature reuse and gradient flow by connecting each layer to all previous layers.
+
+### Key Characteristics
+
+* Dense connectivity structure
+* Efficient feature reuse
+* Reduced overfitting risk
+* Strong performance on smaller datasets
+* Improved gradient propagation
+
+DenseNet121 was additionally explored in this project to evaluate its compatibility with the same preprocessing pipeline and transfer learning framework.
 
 ---
 
@@ -144,16 +158,20 @@ The models are evaluated using multiple performance metrics.
 
 ## Accuracy Comparison
 
-| Model       | Training Accuracy | Validation Accuracy | Testing Accuracy |
-| ----------- | ----------------- | ------------------- | ---------------- |
-| VGG16       | 80.47%            | 80.05%              | 78.20%           |
-| InceptionV3 | 94.27%            | 91.59%              | 86.25%           |
+| Model       | Training Accuracy                | Validation Accuracy              | Testing Accuracy                 |
+| ----------- | -------------------------------- | -------------------------------- | -------------------------------- |
+| VGG16       | 80.47%                           | 80.05%                           | 78.20%                           |
+| InceptionV3 | 94.27%                           | 91.59%                           | 86.25%                           |
+| DenseNet121 | 91.06%                           | 90.87%                           | 86.52%                           |
+
 
 ---
 
 ## 🔥 Key Findings
 
 ✅ InceptionV3 outperformed VGG16 across all evaluation metrics.
+
+✅ DenseNet121 demonstrated strong compatibility with the preprocessing and transfer learning pipeline.
 
 ✅ Multi-scale feature extraction improved recognition performance.
 
@@ -184,7 +202,7 @@ Classification Prediction
 Future work may include:
 
 * Ensemble learning approaches
-* DenseNet and ResNet integration
+* Advanced ensemble learning with VGG16, InceptionV3, and DenseNet121
 * Larger flower species datasets
 * Malaysian flower dataset collection
 * Real-time mobile application deployment
@@ -208,10 +226,25 @@ This project demonstrates how transfer learning and advanced CNN architectures c
 | ----------------------- | --------------------------------- |
 | Programming Language    | Python                            |
 | Deep Learning Framework | TensorFlow / Keras                |
-| Models                  | VGG16, InceptionV3                |
+| Models                  | VGG16, InceptionV3, DenseNet121   |
 | Dataset                 | Kaggle Flower Recognition Dataset |
 | Visualization           | Matplotlib                        |
 | Development Environment | Jupyter Notebook                  |
+
+---
+
+# 📂 Project Structure
+
+```text
+├── dataset/
+├── models/
+├── notebooks/
+│   └── Main.ipynb
+├── results/
+├── poster/
+├── presentation/
+└── README.md
+```
 
 ---
 
@@ -246,8 +279,10 @@ Run all cells sequentially.
 ---
 
 # 🏆 Research Contribution
+
 This project provides a comparative analysis of pretrained CNN architectures for flower species recognition and demonstrates the effectiveness of advanced transfer learning approaches in solving fine-grained image classification problems.
 
+---
 
 # 📜 Conference Achievement
 

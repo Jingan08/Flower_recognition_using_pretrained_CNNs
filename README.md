@@ -284,8 +284,3 @@ This project provides a comparative analysis of pretrained CNN architectures for
 
 ---
 
-# 📜 Conference Achievement
-
-🏅 Accepted at:
-
-**International Conference on Computer, Information Technology and Intelligent Computing 2026 (CITIC 2026)**
